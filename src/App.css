@@ -2,7 +2,6 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    overflow: hidden;
     letter-spacing: 1px;
 }
 
@@ -16,10 +15,17 @@ button {
 
 .homeContainer {
     display: flex;
+    gap: 100px;
+    justify-content: center;
     max-width: 1260px;
     margin: 100px auto;
     padding: 35px;
 
+}
+
+.homeImage img {
+    width: 500px;
+    height: 400px;
 }
 
 .homeInfo {
@@ -27,14 +33,16 @@ button {
 }
 
 .homeInfo h1 {
-    font-size: 96px;
+    font-size: 80px;
     font-weight: 800;
     letter-spacing: 1px;
+    text-align: end;
 }
 
 .playBtn {
     text-align: end;
 }
+
 
 .playBtn button {
     background-color: black;
@@ -79,12 +87,12 @@ button {
     align-items: flex-end;
     gap: 20px;
 }
-.selectDiv p{
+
+.selectDiv p {
     color: red;
-    line-height: 0px;
 }
 
-.NumberBtns{
+.NumberBtns {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -139,20 +147,21 @@ button {
     background-color: white;
     color: black;
 }
+
 .showRulesBtn {
     background-color: black;
     color: white;
 }
-.resetBtn:hover , .showRulesBtn:hover{
+
+.resetBtn:hover,
+.showRulesBtn:hover {
     transform: scale(0.97);
     transition: 0.2s ease-in-out;
 }
 
 
-
 /* Section 3 */
 .section3 {
-    /* display: none; */
     width: fit-content;
     margin: 30px auto;
     background-color: #FBF1F1;
@@ -170,30 +179,72 @@ button {
 
 
 /* dice loading animation */
-.diceAnimate{
-    animation : shake 0.8s;
+.diceAnimate {
+    animation: shake 0.8s;
 }
 
 @keyframes shake {
-    0%{
-        transform: translate3d(0, 0 , 0) ;
+    0% {
+        transform: translate3d(0, 0, 0);
     }
-    15%{
-        transform: translate3d(-35px,0,0) rotate3d(0,0,1, -12deg);
+
+    15% {
+        transform: translate3d(-35px, 0, 0) rotate3d(0, 0, 1, -12deg);
     }
-    30%{
-        transform: translate3d(30px,0,0) rotate3d(0,0,1, 9deg);
+
+    30% {
+        transform: translate3d(30px, 0, 0) rotate3d(0, 0, 1, 9deg);
     }
-    45%{
-        transform: translate3d(-25px,0,0) rotate3d(0,0,1, -6deg);
+
+    45% {
+        transform: translate3d(-25px, 0, 0) rotate3d(0, 0, 1, -6deg);
     }
-    60%{
-        transform: translate3d(20px,0,0) rotate3d(0,0,1, 3deg);
+
+    60% {
+        transform: translate3d(20px, 0, 0) rotate3d(0, 0, 1, 3deg);
     }
-    80%{
-        transform: translate3d(-15px,0,0) rotate3d(0,0,1, -2deg);
+
+    80% {
+        transform: translate3d(-15px, 0, 0) rotate3d(0, 0, 1, -2deg);
     }
-    0%{
-        transform: translate3d(0,0, 0) ;
+
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+
+/* Media query for home page  */
+@media (max-width: 1165px) {
+    .homeContainer {
+        gap: 50px;
+    }
+
+    .homeInfo h1 {
+        font-size: 60px;
+    }
+}
+
+@media (max-width: 960px) {
+    .homeImage img {
+        width: 400px;
+        height: 300px;
+    }
+}
+
+@media (max-width: 860px) {
+    .homeContainer {
+        flex-direction: column;
+        margin: 10px;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .homeInfo {
+        margin-top: 0px;
+    }
+
+    .homeInfo h1 {
+        font-size: 40px;
     }
 }
