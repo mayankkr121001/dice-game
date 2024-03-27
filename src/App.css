@@ -1,38 +1,199 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+    letter-spacing: 1px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+button {
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
+    cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* HOME PAGE */
+
+.homeContainer {
+    display: flex;
+    max-width: 1260px;
+    margin: 100px auto;
+    padding: 35px;
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.homeInfo {
+    margin-top: 140px;
 }
 
-.App-link {
-  color: #61dafb;
+.homeInfo h1 {
+    font-size: 96px;
+    font-weight: 800;
+    letter-spacing: 1px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.playBtn {
+    text-align: end;
+}
+
+.playBtn button {
+    background-color: black;
+    color: white;
+    padding: 8px 50px;
+    border: 1px solid black;
+    border-radius: 5px;
+    transition: 0.2s ease-in-out;
+    letter-spacing: 1px;
+}
+
+.playBtn button:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    transition: 0.2s ease-in-out;
+}
+
+/* GAMEPAGE */
+
+.section1 {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1260px;
+    margin: 0px auto;
+    padding: 35px;
+}
+
+.scoreDiv {
+    text-align: center;
+    padding-right: 20px;
+}
+
+.scoreDiv h1 {
+    font-size: 100px;
+    line-height: 100px;
+}
+
+.selectDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 20px;
+}
+.selectDiv p{
+    color: red;
+    line-height: 0px;
+}
+
+.NumberBtns{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.NumberBtns button {
+    background-color: white;
+    height: 60px;
+    width: 60px;
+    border: 2px solid black;
+}
+
+.NumberBtns button:focus {
+    background-color: black;
+    color: white;
+}
+
+.selectDiv h4 {
+    font-size: 24px;
+}
+
+/* Section 2 */
+
+.section2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.diceDiv img {
+    height: 160px;
+    width: 160px;
+}
+
+.btnsDiv {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.resetBtn,
+.showRulesBtn {
+    padding: 3px 30px;
+    margin-top: 15px;
+    border: 2px solid black;
+    border-radius: 2px;
+    font-weight: 500;
+    transition: 0.2s ease-in-out;
+}
+
+.resetBtn {
+    background-color: white;
+    color: black;
+}
+.showRulesBtn {
+    background-color: black;
+    color: white;
+}
+.resetBtn:hover , .showRulesBtn:hover{
+    transform: scale(0.97);
+    transition: 0.2s ease-in-out;
+}
+
+
+
+/* Section 3 */
+.section3 {
+    /* display: none; */
+    width: fit-content;
+    margin: 30px auto;
+    background-color: #FBF1F1;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.section3 h4 {
+    margin-bottom: 15px;
+}
+
+.section3 p {
+    font-size: 14px;
+}
+
+
+/* dice loading animation */
+.diceAnimate{
+    animation : shake 0.8s;
+}
+
+@keyframes shake {
+    0%{
+        transform: translate3d(0, 0 , 0) ;
+    }
+    15%{
+        transform: translate3d(-35px,0,0) rotate3d(0,0,1, -12deg);
+    }
+    30%{
+        transform: translate3d(30px,0,0) rotate3d(0,0,1, 9deg);
+    }
+    45%{
+        transform: translate3d(-25px,0,0) rotate3d(0,0,1, -6deg);
+    }
+    60%{
+        transform: translate3d(20px,0,0) rotate3d(0,0,1, 3deg);
+    }
+    80%{
+        transform: translate3d(-15px,0,0) rotate3d(0,0,1, -2deg);
+    }
+    0%{
+        transform: translate3d(0,0, 0) ;
+    }
 }
