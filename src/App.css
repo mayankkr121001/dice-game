@@ -247,4 +247,8 @@ button {
     .homeInfo h1 {
         font-size: 40px;
     }
+    .scoreDiv h1 {
+        font-size: 60px;
+        line-height: 100px;
+    }
 }
