@@ -1,9 +1,8 @@
 {
   "homepage": "https://mayankkr121001.github.io/dice-game",
-  "gamepage": "https://mayankkr121001.github.io/dice-game/gamepage",
   "name": "dice-game",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
