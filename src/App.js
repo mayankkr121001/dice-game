@@ -7,7 +7,7 @@ import Gamepage from './components/Gamepage';
 const App = ()=>{
   return(
     <Routes>
-      <Route exact path='/' element={<Home/>}></Route>
+      <Route exact path='/dice-game' element={<Home/>}></Route>
       <Route exact path='/gamepage' element={<Gamepage/>}></Route>
       <Route  path='*' element={<Home/>}></Route>
     </Routes>
