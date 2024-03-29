@@ -9,6 +9,9 @@ const Gamepage = () => {
     const [showRules, setShowRules] = useState(false);
 
     const [diceLoading, setDiceLoading] = useState(false);
+    const [success, setSuccess] = useState(false);
+    const [failure, setFailure] = useState(false);
+    const [successFailureClass,  setSuccessFailureClass] = useState("")
 
 
     const diceNoArray = [1, 2, 3, 4, 5, 6];
@@ -31,10 +34,15 @@ const Gamepage = () => {
 
                 if (selectedNo == randomNumber) {
                     setScore((prev) => prev + 5)
+                    setFailure(false);
+                    setSuccess(true);
+                    setSuccessFailureClass("success");
                 }
                 else {
-                    setScore((prev) => prev - 1)
-
+                    setScore((prev) => prev - 1);
+                    setSuccess(false);
+                    setFailure(true);
+                    setSuccessFailureClass("failure");
                 }
                 setSelctedNo(null);
                 setError("");
@@ -55,6 +63,8 @@ const Gamepage = () => {
 
     return (
         <div className="gameContainer">
+            {success && <div className="success">Congratulations! you got 5 points</div>}
+            {failure && <div className="failure">Ohh! you lost 1 point</div>}
             <section className="section1">
                 <div className="scoreDiv">
                     <h1>{score}</h1>

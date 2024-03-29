@@ -62,6 +62,20 @@ button {
 }
 
 /* GAMEPAGE */
+.success{
+    padding-top: 10px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    color: rgb(51, 208, 51);
+}
+.failure{
+    padding-top: 10px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    color: rgb(255, 53, 53);
+}
 
 .section1 {
     display: flex;
