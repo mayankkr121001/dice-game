@@ -11,7 +11,6 @@ const Gamepage = () => {
     const [diceLoading, setDiceLoading] = useState(false);
     const [success, setSuccess] = useState(false);
     const [failure, setFailure] = useState(false);
-    const [successFailureClass,  setSuccessFailureClass] = useState("")
 
 
     const diceNoArray = [1, 2, 3, 4, 5, 6];
@@ -36,13 +35,17 @@ const Gamepage = () => {
                     setScore((prev) => prev + 5)
                     setFailure(false);
                     setSuccess(true);
-                    setSuccessFailureClass("success");
+                    setTimeout(() => {
+                        setSuccess(false);
+                    }, 2000);
                 }
                 else {
                     setScore((prev) => prev - 1);
                     setSuccess(false);
                     setFailure(true);
-                    setSuccessFailureClass("failure");
+                    setTimeout(() => {
+                        setFailure(false);
+                    }, 2000);
                 }
                 setSelctedNo(null);
                 setError("");
@@ -53,6 +56,8 @@ const Gamepage = () => {
 
 
     function resetClicked() {
+        setFailure(false);
+        setSuccess(false);
         setScore(0)
     }
 
